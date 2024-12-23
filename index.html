@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date of birth</title>
+</head>
+<style>
+    .maincontainer{
+        width: 600px;
+        height: 300px;
+        background-color: lightskyblue;
+        padding: 10px;
+        padding-right: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select{
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="maincontainer">
+        <label for="Name">
+        User Name:
+        <input type="text" id="username">
+        </label>
+        <br>
+        <label for="email">
+            User email:
+        <input type="email" id="useremail">
+        </label>
+        <br>
+        <label for="password">
+            User password:
+        <input type="password" id="userpassword">
+        </label>
+        <br>
+        <br>
+        <button onclick=" check()">Sign up</button>
+    </div>
+
+    <script>
+       function check()
+       {
+        let username = document.getElementById("username").value;
+        let useremail = document.getElementById("useremail").value;
+        let userpassword = document.getElementById("userpassword").value;
+        localStorage.setItem("username",username)
+        localStorage.setItem("useremail",useremail)
+        localStorage.setItem("userpassword",userpassword)
+       }
+    </script>
+</body>
+</html>
