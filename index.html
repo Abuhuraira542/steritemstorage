@@ -6,39 +6,79 @@
     <title>Date of birth</title>
 </head>
 <style>
+    body{
+        background-color: rgb(39, 120, 145);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+    }
+    
     .maincontainer{
-        width: 600px;
-        height: 300px;
-        background-color: lightskyblue;
+        align-items: center;
+        flex-direction: column;
+        /* text-align: center; */
+        width: 20%;
+        height: 350px;
+        border: 2px solid black;
+        background: honeydew;
         padding: 10px;
-        padding-right: 10px;
+        margin-left: 700px;
+        margin-top: 200px;
+    }
+    button{
+        width: 110px;
+        padding: 4px;
+        border: 1px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Courier New', Courier, monospace;
+        text-decoration: none;
+
+    }
+    a{
+        text-decoration: none;
+        color: black;
     }
     input[type="text"],
     input[type="email"],
     input[type="password"],
     select{
-        width: 100%;
+        width: 80%;
+    }
+    label{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        box-shadow: 10px  6px  20px lightseagreen;
+        transition-duration: 1s;
+        transition-delay: 0.5s;
     }
 </style>
 <body>
     <div class="maincontainer">
+        <h1>Welcome to sign-up page</h1>
         <label for="Name">
-        User Name:
+        Name:
         <input type="text" id="username">
         </label>
         <br>
         <label for="email">
-            User email:
+        Email:
         <input type="email" id="useremail">
         </label>
         <br>
         <label for="password">
-            User password:
+        password:
         <input type="password" id="userpassword">
         </label>
         <br>
         <br>
-        <button onclick=" check()">Sign up</button>
+        <a href="Login.html">
+        <button onclick="check()">Sign up </a></button>
+        <br>
+        <br>
+       
     </div>
 
     <script>
@@ -51,6 +91,8 @@
         localStorage.setItem("useremail",useremail)
         localStorage.setItem("userpassword",userpassword)
        }
+    
+
     </script>
 </body>
 </html>
